@@ -175,9 +175,9 @@ export const certifications: CertItem[] = [
 
 export const education: EducationItem[] = [
   {
-    school: "University of Colombo",
+    school: "University of Colombo School of Computing (UCSC)",
     detail: "BSc in Computer Science",
-    date: "2023 → present",
+    date: "2023 → 2026",
   },
   {
     school: "Sanghamitta Balika Vidyalaya, Galle",

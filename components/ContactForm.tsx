@@ -8,8 +8,10 @@ import {
   type ContactField,
 } from "@/app/actions/contact";
 
+// text-base (16px) on phones is deliberate: iOS Safari zooms the whole page in
+// when you focus an input smaller than 16px, and never zooms back out.
 const fieldBase =
-  "w-full rounded-none border-0 border-b border-hairline bg-transparent px-0 py-2.5 text-[0.95rem] text-offwhite outline-none transition-colors placeholder:text-textFaint/60 focus:border-blueBright";
+  "w-full rounded-none border-0 border-b border-hairline bg-transparent px-0 py-2.5 text-base text-offwhite outline-none transition-colors placeholder:text-textFaint/60 focus:border-blueBright sm:text-[0.95rem]";
 
 function Label({ htmlFor, children }: { htmlFor: string; children: React.ReactNode }) {
   return (

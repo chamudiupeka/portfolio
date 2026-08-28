@@ -5,8 +5,8 @@ import SectionHead from "./SectionHead";
 
 export default function Certifications() {
   return (
-    <section id="certifications" className="border-t border-hairlineSoft py-20 md:py-24">
-      <div className="mx-auto max-w-content px-7">
+    <section id="certifications" className="border-t border-hairlineSoft py-14 md:py-24">
+      <div className="mx-auto max-w-content px-5 sm:px-7">
         <Reveal>
           <SectionHead eyebrow="certifications" title="Credentials" />
         </Reveal>
