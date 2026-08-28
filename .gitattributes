@@ -1,0 +1,17 @@
+# Store text files with LF in the repo, check out native to each OS.
+# Keeps Windows and Linux (Vercel's build box) consistent, and silences the
+# "LF will be replaced by CRLF" warnings.
+* text=auto
+
+# Shell scripts must stay LF even on a Windows checkout, or they won't run.
+*.sh text eol=lf
+
+# Never run line-ending conversion on binaries.
+*.pdf  binary
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.webp binary
+*.ico  binary
+*.woff binary
+*.woff2 binary
