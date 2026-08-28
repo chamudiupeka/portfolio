@@ -11,7 +11,12 @@ const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
  * could inject extra headers (Bcc, Reply-To) by embedding CRLF in the field.
  */
 function sanitizeHeader(value: string): string {
-  return value.replace(/[\r\n]+/g, " ").trim();
+  return value
+    .replace(/[\r\n]+/g, " ")
+    // Double quotes would terminate the "Display Name" <addr> quoting early
+    // and produce a malformed From/Reply-To header.
+    .replace(/"/g, "")
+    .trim();
 }
 
 let cached: Transporter | null = null;
