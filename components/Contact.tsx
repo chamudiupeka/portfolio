@@ -23,7 +23,7 @@ export default function Contact() {
         <Reveal className="grid grid-cols-1 gap-14 md:grid-cols-[1.5fr_1fr] md:gap-20">
           <div>
             <p className="mb-9 max-w-[52ch] text-[0.95rem] leading-relaxed text-textMuted">
-              Hiring, collaborating, or just want to compare notes on testing and DevOps? Send
+              Hiring, collaborating, or just want to know more information? Send
               a message and it lands straight in my inbox.
             </p>
             <ContactForm />
