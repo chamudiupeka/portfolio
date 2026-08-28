@@ -64,7 +64,7 @@ export default function Hero() {
                 download
                 className="font-mono text-[0.78rem] text-textMuted underline-offset-4 transition-colors hover:text-blueBright hover:underline"
               >
-                résumé ↓
+                resume ↓
               </a>
               <a
                 href="#contact"
