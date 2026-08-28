@@ -6,8 +6,8 @@ import SectionHead from "./SectionHead";
 
 export default function Experience() {
   return (
-    <section id="experience" className="border-t border-hairlineSoft py-20 md:py-24">
-      <div className="mx-auto max-w-content px-7">
+    <section id="experience" className="border-t border-hairlineSoft py-14 md:py-24">
+      <div className="mx-auto max-w-content px-5 sm:px-7">
         <Reveal>
           <SectionHead eyebrow="experience" title="Where I've been building" />
         </Reveal>

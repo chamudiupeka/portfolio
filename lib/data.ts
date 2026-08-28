@@ -53,8 +53,8 @@ export const profile = {
   ],
   facts: [
     { label: 'location', value: 'Colombo, Sri Lanka' },
-    { label: 'university', value: 'Univ. of Colombo, BSc CS' },
-    { label: 'enrolled', value: '2023 → present' },
+    { label: 'university', value: 'Univ. of Colombo, BSc in CS' },
+    { label: 'enrolled', value: '2023 → 2026' },
     { label: 'currently', value: 'SE Intern @ StackNet' },
     { label: 'focus', value: 'full-stack · ai/ml · devops' },
   ],
@@ -175,9 +175,9 @@ export const certifications: CertItem[] = [
 
 export const education: EducationItem[] = [
   {
-    school: "University of Colombo",
+    school: "University of Colombo School of Computing (UCSC)",
     detail: "BSc in Computer Science",
-    date: "2023 → present",
+    date: "2023 → 2026",
   },
   {
     school: "Sanghamitta Balika Vidyalaya, Galle",

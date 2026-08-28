@@ -23,14 +23,14 @@ export default function Hero() {
       id="top"
       className="flex flex-col justify-center overflow-hidden py-14 md:min-h-[calc(100svh-4.5rem)] md:py-10"
     >
-      <div className="mx-auto w-full max-w-content px-7">
+      <div className="mx-auto w-full max-w-content px-5 sm:px-7">
         <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-[minmax(0,0.72fr)_minmax(0,1fr)] md:gap-16">
           <div className="mx-auto w-full max-w-[280px] md:mx-0 md:max-w-[350px]">
             <Portrait src={portrait} />
           </div>
 
           <div>
-            <h1 className="font-display text-[clamp(2.4rem,4.6vw,3.5rem)] font-normal leading-[1.06] tracking-[-0.02em]">
+            <h1 className="font-display text-[clamp(2rem,4.6vw,3.5rem)] font-normal leading-[1.06] tracking-[-0.02em]">
               Hi!
               <span className="mt-1 block md:whitespace-nowrap">
                 I&apos;m <span className="italic text-bluePale">Chamudi</span> Upeka
@@ -64,7 +64,7 @@ export default function Hero() {
                 download
                 className="font-mono text-[0.78rem] text-textMuted underline-offset-4 transition-colors hover:text-blueBright hover:underline"
               >
-                résumé ↓
+                resume ↓
               </a>
               <a
                 href="#contact"

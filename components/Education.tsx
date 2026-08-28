@@ -4,8 +4,8 @@ import SectionHead from "./SectionHead";
 
 export default function Education() {
   return (
-    <section id="education" className="border-t border-hairlineSoft py-20 md:py-24">
-      <div className="mx-auto max-w-content px-7">
+    <section id="education" className="border-t border-hairlineSoft py-14 md:py-24">
+      <div className="mx-auto max-w-content px-5 sm:px-7">
         <Reveal>
           <SectionHead eyebrow="education" title="Background" />
         </Reveal>

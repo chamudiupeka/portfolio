@@ -25,7 +25,8 @@ export default function Disclosure({
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
         aria-controls={id}
-        className="group flex items-center gap-2 font-mono text-[0.7rem] uppercase tracking-[0.1em] text-textFaint transition-colors hover:text-blueBright"
+        // py/-my pair expands the tap target to ~38px without moving anything.
+        className="group -my-2.5 flex items-center gap-2 py-2.5 font-mono text-[0.7rem] uppercase tracking-[0.1em] text-textFaint transition-colors hover:text-blueBright"
       >
         {open ? closeLabel : openLabel}
         <span

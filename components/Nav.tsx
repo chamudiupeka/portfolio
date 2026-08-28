@@ -15,7 +15,7 @@ export default function Nav() {
 
   return (
     <nav className="sticky top-0 z-50 border-b border-hairlineSoft bg-ink/85 backdrop-blur-md">
-      <div className="relative mx-auto flex max-w-content items-center gap-7 px-7 py-5">
+      <div className="relative mx-auto flex max-w-content items-center gap-7 px-5 sm:px-7 py-5">
         <a
           href="#top"
           className="font-display text-[1.15rem] tracking-tight transition-colors hover:text-bluePale"
@@ -31,14 +31,14 @@ export default function Nav() {
         <ul
           className={`${
             open ? "flex" : "hidden"
-          } absolute left-0 right-0 top-full flex-col gap-4 border-b border-hairlineSoft bg-panel px-7 py-5 font-mono text-[0.78rem] text-textMuted md:static md:ml-auto md:flex md:flex-row md:gap-7 md:border-0 md:bg-transparent md:p-0`}
+          } absolute left-0 right-0 top-full flex-col gap-4 border-b border-hairlineSoft bg-panel px-5 sm:px-7 py-5 font-mono text-[0.78rem] text-textMuted md:static md:ml-auto md:flex md:flex-row md:gap-7 md:border-0 md:bg-transparent md:p-0`}
         >
           {links.map((l) => (
             <li key={l.href}>
               <a
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="underline-offset-4 transition-colors hover:text-offwhite hover:underline"
+                className="block py-2 underline-offset-4 transition-colors hover:text-offwhite hover:underline md:inline md:py-0"
               >
                 {l.label}
               </a>
@@ -50,7 +50,7 @@ export default function Nav() {
           aria-label="Toggle navigation"
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className="ml-auto flex h-[34px] w-[34px] items-center justify-center rounded-sm border border-hairline text-offwhite md:hidden"
+          className="ml-auto flex h-10 w-10 items-center justify-center rounded-sm border border-hairline text-lg text-offwhite md:hidden"
         >
           ≡
         </button>

@@ -22,7 +22,7 @@ export default function Portrait({ src }: { src: string | null }) {
               alt="Chamudi Upeka"
               fill
               priority
-              sizes="(max-width: 768px) 90vw, 420px"
+              sizes="(max-width: 768px) 280px, 350px"
               className="object-cover object-[50%_15%] brightness-[0.94] contrast-[1.06] grayscale-[0.4] transition-all duration-700 ease-out hover:brightness-100 hover:grayscale-0"
             />
             {/* Sinks the busy night background into the page. */}
