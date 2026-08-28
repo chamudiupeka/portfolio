@@ -1,16 +1,8 @@
 "use server";
 
 import nodemailer, { type Transporter } from "nodemailer";
-
-export type ContactField = "name" | "email" | "message";
-
-export type ContactState = {
-  status: "idle" | "success" | "error";
-  message: string;
-  fieldErrors?: Partial<Record<ContactField, string>>;
-};
-
-export const initialContactState: ContactState = { status: "idle", message: "" };
+// Types only — this file must export nothing but async functions.
+import type { ContactField, ContactState } from "@/lib/contact";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 

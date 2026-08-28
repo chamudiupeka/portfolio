@@ -2,11 +2,8 @@
 
 import { useEffect, useRef } from "react";
 import { useFormState, useFormStatus } from "react-dom";
-import {
-  initialContactState,
-  sendContactEmail,
-  type ContactField,
-} from "@/app/actions/contact";
+import { sendContactEmail } from "@/app/actions/contact";
+import { initialContactState, type ContactField } from "@/lib/contact";
 
 // text-base (16px) on phones is deliberate: iOS Safari zooms the whole page in
 // when you focus an input smaller than 16px, and never zooms back out.
