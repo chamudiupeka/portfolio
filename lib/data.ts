@@ -160,7 +160,7 @@ export const skillGroups: SkillGroup[] = [
   { label: "devops & cloud", items: ["Docker", "Kubernetes", "Linux", "CI/CD", "Git/GitHub"] },
   { label: "testing & automation", items: ["Playwright", "Postman", "Functional & Non-functional Testing"] },
   // TODO: trim this to what you can speak to in an interview.
-  { label: "ai & ml", items: ["Python", "LLM APIs", "FastAPI", "Pandas", "NumPy"] },
+  //{ label: "ai & ml", items: ["Python", "LLM APIs", "FastAPI", "Pandas", "NumPy"] },
   { label: "practice", items: ["Agile/Scrum", "Jira", "DSA"] },
 ];
 
