@@ -76,20 +76,23 @@ export async function sendContactEmail(
 
   try {
     await getTransporter().sendMail({
-      // Gmail rewrites `from` to the authenticated account regardless, so send
-      // as yourself and put the visitor in replyTo — hitting reply then works.
-      from: `"Portfolio contact" <${process.env.GMAIL_USER}>`,
+      // Gmail only lets you send as the authenticated account, so the address
+      // stays yours no matter what. The display name is free-form though, so
+      // put the sender's name there — that is what the inbox list shows.
+      from: `"${name} (via portfolio)" <${process.env.GMAIL_USER}>`,
       to,
       replyTo: `"${name}" <${email}>`,
       subject: subject || `Portfolio message from ${name}`,
-      text: `From: ${name} <${email}>\n\n${message}`,
+      text: `${message}\n\n--\n${name}\n${email}`,
+      // Message first, sender as a sign-off, so it reads like an ordinary
+      // email instead of a dump of form fields.
       html: `
         <div style="font-family:system-ui,sans-serif;line-height:1.6;color:#16181d">
-          <p style="margin:0 0 4px"><strong>${escapeHtml(name)}</strong></p>
-          <p style="margin:0 0 16px"><a href="mailto:${escapeHtml(email)}">${escapeHtml(email)}</a></p>
-          <div style="white-space:pre-wrap;border-left:3px solid #2f5fcc;padding-left:14px">${escapeHtml(
-            message
-          )}</div>
+          <div style="white-space:pre-wrap">${escapeHtml(message)}</div>
+          <p style="margin:24px 0 0;padding-top:12px;border-top:1px solid #dde3ec;color:#5b6577;font-size:14px">
+            ${escapeHtml(name)}<br />
+            <a href="mailto:${escapeHtml(email)}" style="color:#2f5fcc">${escapeHtml(email)}</a>
+          </p>
         </div>
       `,
     });
